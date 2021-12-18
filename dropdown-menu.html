@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: turquoise;
+        }
+        nav{
+            background-color: #ffffff;
+            align-items: center;
+            padding: 0px 20px;
+            
+        }
+        ul{ 
+            list-style: none;
+        }
+        .menu-ctn > div{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 10px 15px;
+            transition: all .3s ease;
+            width: 150px;
+        }
+        .menu-ctn > div:hover{
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+        .menu-ctn:hover #dropdown{
+            display: block;
+        }
+        .nav-link::after{
+            content:"";
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: black;
+            transition: .3s;
+        }
+        .nav-link:hover::after{
+            width: 100%;
+            transition: width .3s;
+        }    
+        #dropdown > div:hover{
+            cursor: pointer;
+            background-color: #ffffff;
+            display: block;
+        }
+        #dropdown{
+            position: absolute;
+            display: none;
+            left: 45px;
+            width: 130%;
+            top: 100%;
+            padding: 0px 0px;
+            background-color: #ffffff;
+            border-radius: 0px 0px 4px 4px ;
+           
+        }
+        #dropdown div{
+            padding: 10px 15px;
+            /* border-bottom: 1px black solid; */
+            transition: all .3s ease;
+        }
+        #dropdown.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu-ctn">
+            <div class="nav-link">PRADINIS</div>
+            <div class="nav-link">RENGINIAI</div>
+            <div id= "aboutMenu" class="nav-link">
+                APIE MUS
+                <div id="dropdown" class="nav-link">
+                    <div class="nav-link">Inga Urbonavičienė (Išvari)</div>
+                    <div class="nav-link">Rasa Teišerkienė (Ramešvari)</div>
+                    <div class="nav-link">Izolda Jakuševa</div>
+                    <div class="nav-link">Erika Čeponienė</div>
+                    <div class="nav-link">Remigijus Apneris</div>
+                    <div class="nav-link">Rasa Merliūnienė</div>
+                    <div class="nav-link">Agnė Garmuvienė</div>
+                    <div class="nav-link">Jonė Mikšaitė (Yogini)</div>
+                </div>
+            </div>
+            <div>PASLAUGOS</div>
+            <div>SUSISIEKITE</div>
+        </div>
+    </nav>
+    <script>
+        // console.log('this is working');
+        // document.getElementById('aboutMenu').addEventListener('click', openMenu);
+        // function openMenu(){
+        //     document.getElementById('dropdown').classList.toggle('active');
+        // }
+    </script>
+</body>
+</html>
+<!-- /* NAV MENU HOVER */
+            .menu-ctn > div:hover{
+                cursor: pointer;
+                background-color: #ffffff;
+            }
+            .menu-ctn:hover #dropdown{
+                display: block;
+            } 
+/* DROPDOWN MENU HOVER */
+            #dropdown > div :hover{
+                cursor: pointer;
+                background-color: #ffffff;
+                display: block;
+            }
+/* DROPDOWN MENU */
+            #dropdown{
+                position: absolute;
+                display: none;
+                left: 45px;
+                width: 130%;
+                top: 100%;
+                background-color: #ffffff;
+                border-radius: 0px 0px 8px 8px ;
+                z-index: 99; 
+            }
+            #dropdown div{
+                padding: 10px 15px;
+                transition: all .3s ease;
+            }
+            #dropdown.active{
+                display: block;
+
+            } -->
