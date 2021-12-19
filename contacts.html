@@ -5,303 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-mobile-contacts.css">
+    <link rel="stylesheet" href="css/styles-pc-contacts.css">
+    <link rel="icon" href="./img/tab-icon.png">
     <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/cb716979db.js" crossorigin="anonymous"></script>
-    <title>Home Page</title>
-
-    <style>
-        /* --/////////  MOBILE  \\\\\\\\\\\\-- */
-
-        @media screen and (max-width: 600px) {
-            * {
-                font-family: courier;
-                font-weight: bold;
-                box-sizing: border-box;
-            }
-            body {
-                background-color: #f6f1f1;
-                margin: 0 auto;
-            }
-            .main{
-                background-color: blue;
-            }
-            .header {
-                position: relative;
-                background-color: #f6f1f1;
-                margin: 0 auto;
-                width: 100%;
-                height: 20%;
-                z-index: -1;              
-            }
-            .slogo{
-                width: 51%;
-            }
-            .logo-text{
-                position: absolute;
-                left: 70%;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-/* ANIMATED UNDERLINE */
-            .nav-link::after{
-                content:"";
-                display: block;
-                width: 0;
-                height: .5px;
-                background-color: #9b9b9b;
-                transition: .3s;
-            }
-            .nav-link:hover::after{
-                width: 100%;
-                transition: width .3s;
-            }
-/* NAV HOVER LINKS */
-            .a:hover, a:link{
-                text-decoration: none;
-                color: black;
-            }
-            a:visited{
-                text-decoration: none;
-                color: black;
-            }
-/* NAV MENU CONTAINER  */
-            .menu-ctn{
-                background-color: #f6f1f1;
-            }
-            .menu-ctn > a{
-                position: relative;
-                display: block;
-                text-align: center;
-                background-color: #f6f1f1;
-                padding: 10px 15px;
-                transition: all .3s ease;
-                width: 109px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-/* MAIN */
-            #main {
-                background-color: lightcoral;
-                overflow: hidden;
-                position: relative;      
-            }
-            #content {
-                position: relative;
-                background-color: #f6f1f1;
-                margin: 0;
-                width: 100%;
-                z-index: 1;
-                padding: 2% 10% 2% 2%;
-                text-align: center;
-            }
-/* IMAGES */
-            img{
-                width: 120%;
-            }
-            #menu-side {
-                display: none;
-                position: absolute;
-                background-color: #f6f1f1;
-                margin: 0;
-                width: 20%;
-                height: 1000px;
-                z-index: 2;
-                top: 0%;
-                left: 80%;
-            }
-/* SOCIAL MEDIA CONTACTS */
-            .socialcont{
-                text-align: center;
-                background-color: #f6f1f1;
-                border-bottom: 1px solid #646464;
-                width: 60%;
-                position: relative;
-                left: 20%;              
-            }
-            .fa-facebook-square{
-                color: #646464;              
-            }
-            .fa-instagram-square{
-                color: #646464;
-            }
-            .fa-envelope-square{
-                color: #646464;               
-            }
-/* FOOTER */
-            .footer { 
-                
-                flex-direction: row;
-                background-color: #f6f1f1;
-                margin: 0;
-                width: 100%;
-                top: 40em;
-                z-index: 1;
-                text-align: left;
-                justify-content: space-between;
-                padding: 2% 10%;
-                font-size: 12px;        
-            }
-        }
-
-        /* --/////////  PC 1000px-600px  \\\\\\\\\\\\-- */
-
-       
-
-        /* --/////////  PC MAX  \\\\\\\\\\\\-- */
-
-        @media screen and (min-width: 600px) {
-            * {
-                font-family: courier;
-                font-weight: bold;
-                box-sizing: border-box;
-            }
-            body {
-                background-color: #f6f1f1;
-                margin: 0 auto;
-            }
-            .header {
-                position: relative;
-                background-color: #f6f1f1;
-                margin: 0 auto;
-                width: 100%;
-                height: 20%;
-                z-index: -1;             
-            }
-            .slogo{
-                width: 20%;
-            }
-            .logo-text{
-                position: absolute;
-                left: 70%;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-            .nav-upperline{
-                background-color: #f6f1f1;
-                border-bottom: 1px solid #646464;
-                width: 60%;
-                position: relative;
-                left: 0%;
-            }
-            .nav-underline{
-                background-color: #f6f1f1;
-                border-bottom: 1px solid #646464;
-                width: 80%;
-                position: relative;
-                left: 0%;
-            }
-/* ANIMATED UNDERLINE */
-            .nav-link::after{
-                content:"";
-                display: block;
-                width: 0;
-                height: .5px;
-                background-color: #9b9b9b;
-                transition: .3s;
-            }
-            .nav-link:hover::after{
-                width: 150%;
-                transition: width .3s;
-            }
-/* NAV HOVER LINKS */
-            .a:hover, a:link{
-                text-decoration: none;
-                color: black;
-            }
-            a:visited{
-                text-decoration: none;
-                color: black;
-            }
-/* NAV MENU CONTAINER  */
-            .menu-ctn{
-                background-color: #f6f1f1;
-            }
-            .menu-ctn > a{
-                position: relative;
-                display: inline-block;
-                text-align: center;
-                background-color: #f6f1f1;
-                padding: 10px 15px;
-                transition: all .3s ease;
-                width: 109px;
-            }
-/* MAIN */
-            #main {
-                background-color: lightcoral;
-                overflow: hidden;
-                position: relative;      
-            }
-            #content {
-                position: relative;
-                background-color: #f6f1f1;
-                margin: 0;
-                width: 100%;
-                z-index: 1;
-                padding: 2% 20% 2% 20%;
-                text-align: center;
-            }
-/* IMAGES */
-            img{
-                width: 60%;
-            }
-            #menu-side {
-                display: none;
-                position: absolute;
-                background-color: #f6f1f1;
-                margin: 0;
-                width: 20%;
-                height: 1000px;
-                z-index: 2;
-                top: 0%;
-                left: 80%;
-            }
-/* SOCIAL MEDIA CONTACTS */
-            .socialcont{
-                text-align: center;
-                background-color: #f6f1f1;
-                border-bottom: 1px solid #646464;
-                width: 60%;
-                position: relative;
-                left: 20%;
-            }
-            .fa-facebook-square{
-                color: #646464;
-            }
-            .fa-instagram-square{
-                color: #646464;
-            }
-            .fa-envelope-square{
-                color: #646464;                
-            }
-/* FOOTER */
-            .footer { 
-                display: flex;
-                flex-direction: row;
-                background-color: #f6f1f1;
-                margin: 0;
-                width: 100%;
-                top: 40em;
-                z-index: 1;
-                text-align: left;
-                justify-content: space-between;
-                padding: 2% 10%;
-                font-size: 14px;                            
-            }
-        }
-    </style>
-
+    <title>Jogos Akademija</title>
 </head>
 
 <body>
-    <!--/////////// HEADER \\\\\\\\\\\-->
+
+<!--/////////// HEADER \\\\\\\\\\\-->
+
     <div class="header">
         <img class="slogo" src="./img/slogo.png" alt="Jogos Akademija Logo">
         <span class="logo-text">Visapusiškam savęs lavinimui!</span>
     </div>
     <div class="nav-upperline"></div>
 
-    <!--/////////// NAV \\\\\\\\\\\-->
+<!--/////////// NAV \\\\\\\\\\\-->
 
     <div class="menu-ctn">
         <a href="index.html" class="nav-link">PRADINIS</a>
@@ -313,18 +35,54 @@
 
     <div class="nav-underline"></div>
 
-    <!--/////////// MAIN \\\\\\\\\\\-->
+<!--/////////// MAIN \\\\\\\\\\\-->
 
     <div id="main">
         <div id="content">
-            <img src="./img/Nuo-lapkričio-3-d..png" alt="Nuo Nuo-lapkričio-3-d">
-            <img src="./img/Red-Heart-Gothic-Wedding-Expo-Facebook-Event-Cover2-1-1024x576.png" alt="Red-Heart-Gothic-Wedding-Expo-Facebook-Event-Cover2-1-1024x576">
-            <img src="./img/freelesson.png" alt="freelesson">
-            <img src="./img/registracija.png" alt="registracija">                                                              
+            <h2>SUSISIEKITE</h2>
+            <div>REKVIZITAI:</div>
+            <div>VŠĮ “Jogos akademija”</div>
+            <div>įmonės kodas 302530491</div>
+            <div>A/s.nr LT21 7044 0600 0800 3287</div>
+            <div>AB SEB Vilniaus bankas, b.k. 70440</div>
+            <div>&nbsp</div>
+            <div>Atlikus apmokėjimą – pavedimo išrašą išsiųskite jogosakademija.zoom@gmail.com ir gausite nuorodas
+                prisijungimui į užsiėmimus!</div>
+            <div>&nbsp</div>
+            <div>Mus rasite:</div>
+            <div>&nbsp</div>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="400" height="400" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Vytauto%20prospekte%2013%2C&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                        href="http://vin-odometer.info"></a><br>
+                    <a href="https://embedmaps.info"></a>
+                </div>
+            </div>
+            <div>&nbsp</div>
+            <div>Kaune, Vytauto prospekte 13, “Rojaus daržo” studijoje!</div>
+            <div>&nbsp</div>
+            <div>Pasiteiravimui: +37068501210 Monika / JogosAkademija.</div>
         </div>
+        <div>&nbsp</div>
+
+<!-- CONTACT FORM -->
+
+        <div class="contact-form">
+            <div><input class="name-cont" type="text" placeholder="Vardas"></div>
+            <div>&nbsp</div>
+            <div><input class="email-cont" type="email" name="conemail" id="email" placeholder="E-paštas"></div>
+            <div>&nbsp</div>
+            <div><input class="mess-cont" type="text" placeholder="Žinutė.."></div>
+            <div>&nbsp</div>
+            <div><input type="button" value="Siūsti"></div>
+            <div>&nbsp</div>
+        </div>
+
+<!-- SIDE MENU -->
+
         <div id="menu-side">Side menu</div>
-        
-    </div>
+
 <!-- SOCIAL MEDIA CONTACTS -->
 
     <div class="socialcont">
@@ -333,8 +91,7 @@
         <a href="#"><i class="fas fa-envelope-square fa-2x"></i></a>
     </div>
 
-    <!--/////////// FOOTER \\\\\\\\\\\-->
-
+<!--/////////// FOOTER \\\\\\\\\\\-->
 
     <div class="footer">
         <div class="yoga">
@@ -354,52 +111,5 @@
             <p>+37068501210 Monika</p>
         </div>
     </div>
-
-
-
-    <!--/////////// FUNCTIONS \\\\\\\\\\\-->
-
-    <script>
-
-        // function resizeMenu(){
-            let items = document.getElementsByClassName('navbutt4');
-        console.log(items[0].offsetWidth);
-        console.log(items[0].offsetHeight);
-        //     for(let i = 0; i < items.lenght; i++){
-        //         items[i].style.width = '';
-        //     }
-        //     let maxW = 0;
-        //     for(let i = 0; i < items.lenght; i++){
-        //         if(maxW < items[i].offsetWidth){
-        //             maxW = items[i].offsetWidth;
-        //         }
-        //     }
-        //     for(let i = 0; i < items.lenght; i++){
-        //         items[i].style.width = maxW + 'px';
-        //     }
-        // }
-
-        // resizeMenu();
-
-        function funcAbout(){
-            document.getElementsByClassName('navbutt3').classList.toggle('show');
-        }
-
-        window.onclick = function(event){
-            if(!event.target.matches('.navbutt3')){
-                var dropdowns = document.getElementsByClassName('dropdown-content');
-                var i;
-                for(i = 0; i < dropdowns.length; i++){
-                    var openDropdown = dropdowns[i];
-                    if(openDropdown.classList.contains('show')){
-                        openDropdown.classList.remove('show')
-                    }
-                }
-            }
-        }
-        
-
-    </script>
 </body>
-
 </html>

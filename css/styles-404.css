@@ -1,0 +1,10 @@
+*{
+    background-color: #f6f1f1;
+    font-family: courier;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: center;
+}
+.err404{
+    font-size: 150px;
+}
